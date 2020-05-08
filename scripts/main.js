@@ -216,3 +216,12 @@ let customers = [
     },
   },
 ];
+
+let outputEl = document.querySelector("#emailOutput");
+outputEl.innerHTML += `<h1>E-mail List</h1>`;
+
+customers.filter((person) => {
+  person.contacts.email.forEach((email) => {
+    outputEl.innerHTML += `<div>${email}</div>`;
+  });
+});
